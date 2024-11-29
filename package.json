@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.13",
+    "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "react-slick": "^0.30.2",
+    "react-swiper": "^0.1.5",
+    "reset-scss": "^1.0.0",
+    "sass": "^1.81.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   }
 }
