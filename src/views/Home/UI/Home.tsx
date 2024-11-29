@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./styles.scss";
 import {Swiper as Noobikk, SwiperRef, SwiperSlide} from "swiper/react"
 import {Navigation} from "swiper/modules"
+import { olya } from "../config/olya";
 export const Home = () => {
   const [autoplay , setAutoplay] = useState(false)
 
@@ -35,7 +36,7 @@ export const Home = () => {
                 height : "clamp(2.063rem, 0.875rem + 5.28vw, 5.625rem)",
                 overflowY : "hidden"
             }}
-            effect="cube"
+            effect={"cube"}
             direction="vertical"
             loop={true}
             slidesPerView={1}
@@ -44,28 +45,11 @@ export const Home = () => {
               prevEl: ".prev",
             }}
           >
-            <SwiperSlide>
-                <h1 className="home__h1 q">великолепная</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-              <h1 className="home__h1 q">безупречная</h1>
-            </SwiperSlide >
-            <SwiperSlide>
-              <h1 className="home__h1 q">чудесная</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1 className="home__h1 q">потрясающая</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1 className="home__h1 q">божественная</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1 className="home__h1 q">лучшая</h1>
-            </SwiperSlide>
-            <SwiperSlide>
-                <h1 className="home__h1 q">восхитительная</h1>
-            </SwiperSlide>
-            
+            {olya.map( (e) => {
+                return <SwiperSlide>
+                    <h1 className="home__h1 q">{e}</h1>
+                </SwiperSlide>
+            })}
           </Noobikk>
         </div>
         <div className="home__buttons-block">
